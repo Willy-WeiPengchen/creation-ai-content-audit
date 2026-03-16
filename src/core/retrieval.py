@@ -1,5 +1,16 @@
 # Copyright 2026 Pengchen Wei
-# ... (Apache Header Same as above) ...
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 """
 Module 4: Basic Content Retrieval & Classification
@@ -16,27 +27,17 @@ class ContentRetriever:
         self.db = database
 
     def search(self, keyword: str, lang: str = None, mark_color: str = None) -> list:
-        """
-        基础检索功能
-        支持按语种、标记颜色、关键词筛选
-        """
         results = []
         for item in self.db:
-            # 关键词匹配
             if keyword.lower() in item['content'].lower():
-                # 语种筛选
                 if lang and item['lang'] != lang:
                     continue
-                # 标记颜色筛选
                 if mark_color and item.get('property_mark') != mark_color:
                     continue
                 results.append(item)
         return results
 
     def export_csv(self, results: list, filename: str):
-        """
-        导出为 CSV 格式
-        """
         import csv
         with open(filename, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
