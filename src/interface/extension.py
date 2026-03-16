@@ -1,5 +1,16 @@
 # Copyright 2026 Pengchen Wei
-# ... (Apache Header Same as above) ...
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 """
 Module 6: Basic Code Extension Interface
@@ -9,7 +20,6 @@ Prohibits bypassing patent protection logic.
 
 from abc import ABC, abstractmethod
 
-# 定义抽象基类，供开发者继承扩展
 class BaseIngestionExtension(ABC):
     """
     扩展接口示例：允许开发者自定义内容预处理逻辑
@@ -17,7 +27,3 @@ class BaseIngestionExtension(ABC):
     @abstractmethod
     def preprocess(self, content: str) -> str:
         pass
-
-# 开发者可以在遵守 Apache 2.0 及专利声明的前提下，
-# 实现自己的预处理逻辑（例如特定格式的清洗），
-# 但不得修改底层架构以绕过专利保护范围。
