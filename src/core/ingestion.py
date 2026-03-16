@@ -18,50 +18,38 @@ Focuses on basic content ingestion, classification, and format validation.
 Does NOT include intelligent rights attribution or identity binding.
 """
 
+import datetime  # ← 新增导入
+
 class ContentIngestor:
     """
     基础多语种内容收录接口
     """
     
-    SUPPORTED_LANGUAGES = ['zh', 'en', 'ja', 'ko'] # 支持中文、英文、日文、韩文
-    SUPPORTED_TYPES = ['text', 'image', 'short_video'] # 文本、图片、短视频
+    SUPPORTED_LANGUAGES = ['zh', 'en', 'ja', 'ko']
+    SUPPORTED_TYPES = ['text', 'image', 'short_video']
 
     def __init__(self):
-        self.database = [] # 模拟基础存储
+        self.database = []
 
     def ingest_single(self, content: str, lang: str, content_type: str, source: str) -> dict:
-        """
-        单条内容录入
-        :param content: 内容文本
-        :param lang: 语言代码
-        :param content_type: 内容类型
-        :param source: 来源
-        :return: 标准化存储对象
-        """
-        # 1. 基础格式校验（过滤非法字符、空内容）
         if not content or not content.strip():
             raise ValueError("Content cannot be empty.")
         
         if lang not in self.SUPPORTED_LANGUAGES:
             print(f"Warning: Language '{lang}' not in default support list. Extensible interface available.")
         
-        # 2. 标准化输出格式
         record = {
             "id": len(self.database) + 1,
             "content": self._sanitize(content),
             "lang": lang,
             "type": content_type,
             "source": source,
-            "timestamp": "2026-03-16T13:20:00Z" # 模拟时间戳
+            "timestamp": datetime.datetime.utcnow().isoformat() + "Z"  # ← 修正为动态时间戳
         }
-        
         self.database.append(record)
         return record
 
     def ingest_batch(self, content_list: list) -> list:
-        """
-        批量录入模式
-        """
         results = []
         for item in content_list:
             try:
@@ -71,10 +59,6 @@ class ContentIngestor:
         return results
 
     def _sanitize(self, text: str) -> str:
-        """
-        基础非法字符过滤（示例）
-        """
-        # 这里仅做示例，实际可扩展更复杂的过滤规则
         return text.strip()
 
 # 开发者可扩展接口示例：
