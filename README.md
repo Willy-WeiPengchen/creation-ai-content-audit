@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-## 创作与AI辅助内容数据核验系统（开源基础版）  
-## Data Audit & Verification System for Creation & AI-assisted Content (Open Source Basic Edition)
+## 创作与AI辅助内容数据核验工具集（开源基础版）
+## Data Audit & Verification Toolkit for Creation & AI-assisted Content (Open Source Basic Edition)
 
 > Open-source basic edition of a data audit and verification system for human-created and AI-assisted content, focused on foundational integrity checks. Core IP (including intelligent rights attribution and value distribution) is protected under Chinese Patent Application No. 202610230541.6.
 
@@ -65,7 +65,7 @@ creation-ai-content-audit/  # 仓库根目录（project-root）
 - 核心功能：提供两种基础部署模式的适配接口，满足不同开发者的部署需求，接口文档简洁易懂，可直接对接基础服务器环境；
 - 部署模式：
   1.  内嵌部署：支持将开源模块内嵌到现有内容平台、创作工具中，提供标准化的接口调用文档，适配常见的开发环境（Python、Java、JavaScript）；
-  2.  独立部署：支持单独部署为小型服务，提供基础的可视化管理界面（仅包含内容录入、核验、检索功能），无需依赖其他商业组件；
+  2.  独立部署：支持以命令行或脚本方式独立运行基础核验流程，不包含可视化界面；开发者可基于本模块输出结果自行构建前端展示层;
 - 功能细节：提供基础的部署配置说明，支持端口自定义、基础安全配置（如密码登录），不包含未开源的“SaaS部署”“多租户管理”能力。
 
 ### 6. 基础代码扩展接口
