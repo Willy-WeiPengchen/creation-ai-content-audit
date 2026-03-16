@@ -1,28 +1,23 @@
 Copyright 2026 Pengchen Wei
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+This software includes code developed by Pengchen Wei.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 
 This project is associated with Chinese Patent Application No. 202610230541.6 
 ("A Method and System for Data Audit and Verification of Creation and AI-assisted Content").
 
+
 The open-source basic edition implements only foundational data verification features. 
-It does not implement the subject matter claimed in Chinese Patent Application No. 202610230541.6, including but not limited to:
+It does NOT implement the subject matter claimed in Chinese Patent Application No. 202610230541.6, including but not limited to:
 - Intelligent Rights Attribution Module
 - Value Distribution Engine
 - Triple-Fingerprint Anti-Infringement System
 - "Cun-Zhan-Rong" O2O Commercial Closed-Loop Components
 
+
 Implementation of the full patented system requires separate written authorization 
 from the patent owner, Pengchen Wei.
 
-Use of this software is subject to the terms of the Apache License 2.0.
+
+Use of this software is subject to the terms of the Apache License, Version 2.0.
