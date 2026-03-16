@@ -1,9 +1,9 @@
-# creation-ai-content-audit
-Open-source basic edition of a data audit and verification system for human-created and AI-assisted content, focused on foundational integrity checks. Core IP (including intelligent rights attribution and value distribution) is protected under Chinese Patent Application No. 202610230541.6.
-
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-# 创作与AI辅助内容数据核验系统（开源基础版）
-# Data Audit & Verification System for Creation & AI-assisted Content (Open Source Basic Edition)
+
+## 创作与AI辅助内容数据核验系统（开源基础版）  
+## Data Audit & Verification System for Creation & AI-assisted Content (Open Source Basic Edition)
+
+> Open-source basic edition of a data audit and verification system for human-created and AI-assisted content, focused on foundational integrity checks. Core IP (including intelligent rights attribution and value distribution) is protected under Chinese Patent Application No. 202610230541.6.
 
 ## 项目初心与价值定位
 当前，内容平台已成为连接个体、传递信息的核心载体，其健康发展离不开对创作者权益的保障与优质内容的扶持。本项目致力于通过技术与制度结合，为内容平台、创作者及开发者提供合规、可复用的基础数据核验工具，助力行业回归内容价值本质，实现平台与创作者的共赢发展。
